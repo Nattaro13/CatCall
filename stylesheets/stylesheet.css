@@ -16,7 +16,7 @@ body {
   
 .button {
 	
-            background: url(/images/cloud3.png) no-repeat;
+            background: url(images/cloud3.png) no-repeat;
             cursor: pointer;
 			border: none;
             }
