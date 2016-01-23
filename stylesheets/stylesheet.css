@@ -244,6 +244,13 @@ a {
   .site-footer {
     font-size: 0.9rem; } }
 
-	
-<button type="donate"><img src=""C:/User/Desktop/cloud 3.png"" alt="Donate"></button> 
+
 /*<input type="donate" name="Donate" style="background: url(cloud3.png); width:100px; height:25px;" /> */
+
+div.myButton input {
+	background:url(/Desktop/cloud3.png) no-repeat;
+	cursor: pointer;
+	width: 200px;
+	height: 100px;
+	border:none;
+	}
