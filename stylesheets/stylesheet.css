@@ -243,3 +243,17 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+	
+<div class="main-buttons">
+
+<a class="button" href="#">Sample button</a>
+	<button class="button" id="save">Sample button</button>
+	  <input class="button" value="Sample Button" type="submit" />
+.button {
+  padding:5px;
+  background-color: #dcdcdc;
+  border: 1px solid #666;
+  color:#000;
+  text-decoration:none;
+}
