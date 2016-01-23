@@ -71,7 +71,6 @@ function __ShowSnow(settings)
             dx[i] += stx[i];
             flakes[i].css("top", yp[i] + "px");
             flakes[i].css("left", (xp[i] + am[i] * Math.sin(dx[i])) + "px");
-            flakes[i].css("z-index",1);
         }
 
         snowtimer = setTimeout(animateSnow, 10);
@@ -97,7 +96,7 @@ function __ShowSnow(settings)
     var settings = $.extend({
             SnowImage:      undefined,
             Quantity:       40,
-            HideSnowTime:   500
+            HideSnowTime:   0
         }, options);
 
     __ShowSnow(settings);

@@ -58,7 +58,11 @@
 
 
 <body> 
-
+<script type="text/javascript">
+$(function() {
+    $(document).snow({ SnowImage: "final_cat_food.gif" });
+});
+</script>
 
   <div class="top">
     <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500">
@@ -88,8 +92,8 @@
       <input type="image" 
       id = "pray-btn"
       src="images/pray_pic.png" width="300"
+      onMouseOver="this.src='images/pray_hover.png'" onMouseOut="this.src='images/pray_pic.png'"
       > 
-      <script type="text/javascript" src="main.js"></script>
 
     </div>
 
