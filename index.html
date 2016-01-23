@@ -14,8 +14,10 @@
 
   <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
   <script src="stylesheets/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="snow.js"></script>
 
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
@@ -56,23 +58,6 @@
 
 
 <body> 
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '585227171628421',
-        xfbml      : true,
-        version    : 'v2.5'
-      });
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
 
 
   <div class="top">
@@ -101,8 +86,11 @@
 
     <div class="col-sm-4">
       <input type="image" 
-      onClick="window.open('http://www.google.com.sg', 'newwindow'); return false;" src="images/pray_pic.png" VALUE="DONATE" width="300"
-      onMouseOver="this.src='images/pray_hover.png'" onMouseOut="this.src='images/pray_pic.png'"> 
+      id = "pray-btn"
+      src="images/pray_pic.png" width="300"
+      > 
+      <script type="text/javascript" src="main.js"></script>
+
     </div>
 
     <div class="col-sm-4">
@@ -125,5 +113,26 @@
 
 <br><br><br>
 </div> 
+
+
+
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '585227171628421',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script> 
+
 </body>
 </html> 
