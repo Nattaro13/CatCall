@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   color: #606c71; }
 
@@ -245,15 +245,5 @@ a {
     font-size: 0.9rem; } }
 
 	
-<div class="main-buttons">
-
-<a class="button" href="#">Sample button</a>
-	<button class="button" id="save">Sample button</button>
-	  <input class="button" value="Sample Button" type="submit" />
-.button {
-  padding:5px;
-  background-color: #dcdcdc;
-  border: 1px solid #666;
-  color:#000;
-  text-decoration:none;
-}
+<button type="donate"><img src=""C:/User/Desktop/cloud 3.png"" alt="Donate"></button> 
+/*<input type="donate" name="Donate" style="background: url(cloud3.png); width:100px; height:25px;" /> */
