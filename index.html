@@ -4,9 +4,57 @@
 <meta property="og:description"        content="Let the Cat Cors God help you get your NUS module!" />
 <meta property="og:image"              content="https://natx.xyz/CatCors/images/cat_god.jpg" />
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CatCors</title>
+
   <link rel="stylesheet" type="text/css" href="./stylesheets/stylesheet.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+
+  <style>
+      .top
+      {
+          background-image: url("images/top_background.jpg");
+          height: 700px;
+          position:relative;
+      }
+      .centralise
+      {
+
+          z-index: 40;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%)
+      }
+      .bottomMiddle
+      {
+          z-index: 50;
+          position: absolute;
+          top: 80%;
+          left: 42.5%;
+          margin-right: 5%;
+          transform: translate(-50%, -50%)
+          width: 100%
+          background-color: black;
+          font-family: 'Pacifico', cursive; 
+          font-size: 64px;
+      }
+  </style>
 </head>
+
 
 <body> 
   <script>
@@ -27,21 +75,26 @@
      }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  <!-- Testing Button 
-   <div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-  </div>
-  -->
-
   <script> 
-FB.ui({
-  method: 'share',
-  href: 'https://natx.xyz/CatCors/',
-}, function(response){});
-</script> 
+    FB.ui({
+      method: 'share',
+      href: 'https://natx.xyz/CatCors/',
+    }, function(response){});
+  </script> 
+
+
+<div class="top">
+        <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500">
+        <div class ="bottomMiddle">
+            Cat God <br>
+            <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center"><b>Bow you puney humans</b></div>
+        </div>
+        
+    </div>
+<div class="container">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is some text.</p> 
+</div>
 
 <br> 
 <div id="button">
@@ -49,7 +102,7 @@ FB.ui({
 <INPUT TYPE="button" 
 onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnatx.xyz%2FCatCors%2F&display=popup&ref=plugin&src=like&app_id=585227171628421',
 'newwindow','width=500, height=300'); return false;"
-VALUE="SACRIFICE">
+VALUE="SACRIFICE" img src>
 
 <INPUT TYPE="button" 
 onClick="window.open('http://sosd.org.sg/community-outreach/healing-paws/', 'newwindow'); return false;" src="Desktop/cloud3.png" VALUE="DONATE"> 
@@ -61,3 +114,4 @@ onClick="window.open('http://sosd.org.sg/community-outreach/healing-paws/', 'new
 
 
 </body>
+</html> 
