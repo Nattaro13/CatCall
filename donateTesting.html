@@ -60,16 +60,17 @@
                 right:15%;
                 top:50%;
             }
-        </style>
-        
-        <script>
-            $(document).ready(function () {
-            $("#close1").click(function() {
-    $("#prayModal").modal('hide');
-    $("#modal2").modal('show');
-});
+            #buttonCustom
+            {
+                border: black; 
+                color: black;
+                background-color: lightgray;
+                font-size: 15px;
+                font-family: sans-serif;
             }
-        </script>
+        </style>
+
+
     </head>
 
     <body>
@@ -94,12 +95,6 @@
                     <label for="num">Number of galleons you wish to donate to the Androgynous Cat CORS Goddess:</label>
                     <input type="number" class="form-control" id="num">
                     <br>
-                    <div style ="font-family: 'Pacifico'; font-size: 24px; text-align: center">
-                        <input type="submit" onClick="if (confirm('ARE YOU VERY VERY SURE?'))
-                                    alert('Despite all your best efforts, youo would still not get your module :)');
-                                else
-                                    alert('You shalt not get your module! MUAHAHA')">
-                    </div>
                     <center>
                         <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#prayModal" style = "background-color: lightgray; color: black; font-family: 'Pacifico'; font-size: 24px; text-align: center">Submit</button>
                         <!-- Modal 1 -->
@@ -107,7 +102,9 @@
                             <div class="modal-dialog modal-sm" style = "width: 500px;">
                                 <div class="modal-content">
                                     <div class="modal-header">
+                                        <!--
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        -->
                                         <h4 class="modal-title" style = "height:270px; position: relative;">
                                             <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="250" style = "position: absolute; bottom: 1%;"/></h4>
                                     </div>
@@ -118,29 +115,50 @@
                                         </center>
                                     </div>
                                     <div class="modal-footer">
-                                        <button id = "close1" type="button" class="btn btn-default"  style = "border: black; color: black;">Close</button>
+                                        <button id = "buttonCustom" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal2" data-dismiss="modal" style = "position: relative; bottom: 1%;">Yes</button>
+                                        <button id = "buttonCustom" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal3" data-dismiss="modal" style = "position: relative; bottom: 1%;">No</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Modal 2 -->
-                        <div id="modal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
+                        <div class="modal fade" id="modal2" role="dialog" >
+                            <div class="modal-dialog modal-sm" style = "width: 500px;">
                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" style = "height:270px; position: relative;">
+                                            <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="250" style = "position: absolute; bottom: 1%;"/></h4>
+                                    </div>
                                     <div class="modal-body">
-                                        <p>this is modal no. 2</p>
+                                        <center>
+                                            <h3>Despite all your best efforts, you would still not get your module :)</h3>
+                                            <img src="images/paw.png" alt="paw" height="50"/>
+                                        </center>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id = "buttonCustom" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Modal 3 -->
-                        <div id="modal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
+                        <div class="modal fade" id="modal3" role="dialog" >
+                            <div class="modal-dialog modal-sm" style = "width: 500px;">
                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" style = "height:270px; position: relative;">
+                                            <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="250" style = "position: absolute; bottom: 1%;"/></h4>
+                                    </div>
                                     <div class="modal-body">
-                                        <p>this is modal no. 3</p>
+                                        <center>
+                                            <h3>You shalt not get your module! MUAHAHA</h3>
+                                            <img src="images/paw.png" alt="paw" height="50"/>
+                                        </center>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id = "buttonCustom" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +166,7 @@
                 </div>
                 </center>
             </div>
+
 
 
     </body>
