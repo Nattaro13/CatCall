@@ -1,0 +1,156 @@
+<meta property="og:url"                content="https://natx.xyz/CatCors/" />
+<meta property="fb:app_id"             content="585227171628421" />
+<meta property="og:title"              content="CatCors" />
+<meta property="og:description"        content="Let the Cat Cors God help you get your NUS module!" />
+<meta property="og:image"              content="https://natx.xyz/CatCors/images/cat_god.jpg" />
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>CatCors</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+        <script src="stylesheets/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="snow.js"></script>
+
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+
+        <style>
+            .top
+            {
+                background-image: url("images/top_background.jpg");
+                height: 700px;
+                position:relative;
+            }
+            .centralise
+            {
+
+                z-index: 40;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%)
+            }
+            .bottomMiddle
+            {
+                z-index: 50;
+                position: absolute;
+                top: 80%;
+                left: 38%;
+                margin-right: 5%;
+                transform: translate(-50%, -50%)
+                    width: 100%
+                    background-color: black;
+                font-family: 'Pacifico', cursive; 
+                font-size: 64px;
+            }
+            #bubble3
+            {
+                z-index: 52;
+                position: absolute;
+                right:15%;
+                top:50%;
+            }
+        </style>
+        
+        <script>
+            $(document).ready(function () {
+            $("#close1").click(function() {
+    $("#prayModal").modal('hide');
+    $("#modal2").modal('show');
+});
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="top">
+            <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500"/>
+            <img id = "bubble3" src="images/bubble3.png" alt="Speech Bubble 2"/>
+            <div class ="bottomMiddle">
+                Cat God <br>
+                <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center"><b>Bow you puney humans</b></div>
+            </div>
+        </div>
+
+
+
+        <div class="container" style= "padding-top: 30px; padding-left: 10%; padding-right: 10%; bottom: 20px;">
+
+            <div class="form-group">
+                <div style ="font-family: 'Pacifico'; font-size: 30px; text-align: left"> 
+                    <label for="usr">Name of puny human:</label>
+                    <input type="text" class="form-control" id="usr">
+                    <br>
+                    <label for="num">Number of galleons you wish to donate to the Androgynous Cat CORS Goddess:</label>
+                    <input type="number" class="form-control" id="num">
+                    <br>
+                    <div style ="font-family: 'Pacifico'; font-size: 24px; text-align: center">
+                        <input type="submit" onClick="if (confirm('ARE YOU VERY VERY SURE?'))
+                                    alert('Despite all your best efforts, youo would still not get your module :)');
+                                else
+                                    alert('You shalt not get your module! MUAHAHA')">
+                    </div>
+                    <center>
+                        <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#prayModal" style = "background-color: lightgray; color: black; font-family: 'Pacifico'; font-size: 24px; text-align: center">Submit</button>
+                        <!-- Modal 1 -->
+                        <div class="modal fade" id="prayModal" role="dialog" >
+                            <div class="modal-dialog modal-sm" style = "width: 500px;">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title" style = "height:270px; position: relative;">
+                                            <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="250" style = "position: absolute; bottom: 1%;"/></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <center>
+                                            <h3>ARE YOU VERY VERY SURE?</h3>
+                                            <img src="images/paw.png" alt="paw" height="50"/>
+                                        </center>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id = "close1" type="button" class="btn btn-default"  style = "border: black; color: black;">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal 2 -->
+                        <div id="modal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <p>this is modal no. 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal 3 -->
+                        <div id="modal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <p>this is modal no. 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </center>
+            </div>
+
+
+    </body>
+
+
+</html>
