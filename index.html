@@ -25,9 +25,10 @@
 
   <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+  <script src="stylesheets/jquery.min.js"></script> 
   <script src="stylesheets/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="stylesheets/jquery-1.7.1.js"></script>
+  <script type = "text/javascript" src = "stylesheets/jquery-ui.min.js"></script>
   <script type="text/javascript" src="snow.js"></script>
 
   <!-- Fonts -->
@@ -95,69 +96,14 @@
       }
   </style>
 
-  <audio id="playom" src="sounds/om.mp3" loop="loop"></audio>
-  <audio id="playgong1" src="sounds/gong.mp3" loop="loop"></audio>
+  <audio id="playom" src="sounds/om.mp3" loop="loop" autoplay></audio>
 
-  <script type="text/javascript">
-        //first bubble loading
-        $(document).ready(function () {
-            //play background om music
-            $("#playom").get(0).play();
-
-            //revealation
-            var audioElement = document.createElement('audio');
-            audioElement.setAttribute('src', 'resource/gong.mp3');
-            $.get();
-
-            $('#playgong').click(function () {
-                $("#playom").get(0).pause();
-                audioElement.play();
-            });
-
-            //first bubble fade in
-            $('#bubble1').delay(1000).fadeIn(300);
-        });
-
-
-        //scrolling animation
-        window.onscroll = function () {
-            firstBubble();
-            secondBubble();
-        };
-
-        function firstBubble() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("bubble1").className = "hidebubble";
-                $('#bubble2').fadeIn(200);
-            }
-        }
-
-        function secondBubble() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("bubble2").className = "hidebubble";
-                $('#bubble3').fadeIn(200);
-            }
-        }
-
-
-        function shake(n) {
-            if (parent.moveBy) {
-                for (i = 10; i > 0; i--) {
-                    for (j = n; j > 0; j--) {
-                        parent.moveBy(0, i);
-                        parent.moveBy(i, 0);
-                        parent.moveBy(0, -i);
-                        parent.moveBy(-i, 0);
-                    }
-                }
-            }
-        }    </script>
-
+  
 </head>
 
 
 <body> 
-
+<div class="whole"> 
 
   <div class="top">
             <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500">
@@ -170,7 +116,6 @@
       </div>  
   </div>
 
-
 <div class="container">
   <div class="row">
     <div style ="font-family: 'Pacifico', bold; text-align: center"> 
@@ -178,10 +123,9 @@
     </div>
     <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center">
       <p><b>This is where you pay your respect...in hopes of securing that 4k module.</b> </p>
-        <p><img src="http://www.e-zeeinternet.com/count.php?page=1134657&style=big_block&nbdigits=5&reloads=1" alt="Web Counter" border="0" >
-        punies have seeked me for luck <br></p>
+        <p><!-- Counter Code START --><a href="http://www.e-zeeinternet.com/" target="_blank"><img src="http://www.e-zeeinternet.com/count.php?page=1134666&style=big_block&nbdigits=5&reloads=1" alt="Hit Counter" border="0" ></a> punies have visited this shrine<br><a href="http://www.e-zeeinternet.com/" title="Hit Counter" target="_blank" style="font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 10px; color: white; text-decoration: none;"></a><!-- Counter Code END --></p>
       <button id="playgong">Play Music</button><br>
-      <input type=button onClick="shake(2)" value="Shake Screen">
+      <button id = "shake-btn"> Shake </button>
 
     </div>
   </div>
@@ -252,17 +196,62 @@
 
 
 <script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+        //first bubble loading
+        $(document).ready(function () {
+            //play background om music
+            $("#playom").get(0).play();
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-  <script src="js/main.js"></script>
+            //revealation
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'sounds/gong.mp3');
+            $.get();
 
-  <script>
-  var _gaq=[['_setAccount','UA-839919-3'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src='//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+            $('#playgong').click(function () {
+                $("#playom").get(0).pause();
+                audioElement.play();
+            });
 
+            $("#shake-btn").click(function(){
+               $(".whole").effect( "shake", {times:30}, 4000 );
+            });
+
+            //laughter
+            var laughaudio = audioElement;
+            laughaudio.addEventListener("ended", function () {
+                laughaudio.src = "sounds/laughter.mp3";
+                laughaudio.loop = true;
+                laughaudio.play();
+            });
+
+            //first bubble fade in
+            $('#bubble1').delay(1000).fadeIn(300);
+
+
+        //scrolling animation
+        window.onscroll = function () {
+            firstBubble();
+            secondBubble();
+        };
+
+        function firstBubble() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("bubble1").className = "hidebubble";
+                $('#bubble2').fadeIn(200);
+            }
+        }
+
+        function secondBubble() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("bubble2").className = "hidebubble";
+                $('#bubble3').fadeIn(200);
+            }
+        }
+
+      });
+      
+    </script>
+
+</div> 
 </body>
 </html> 
