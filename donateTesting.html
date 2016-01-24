@@ -45,7 +45,7 @@
                 z-index: 50;
                 position: absolute;
                 top: 80%;
-                left: 42.5%;
+                left: 38%;
                 margin-right: 5%;
                 transform: translate(-50%, -50%)
                     width: 100%
@@ -53,26 +53,37 @@
                 font-family: 'Pacifico', cursive; 
                 font-size: 64px;
             }
+            #bubble3
+            {
+                z-index: 52;
+                position: absolute;
+                right:15%;
+                top:50%;
+            }
         </style>
     </head>
 
     <body>
         <div class="top">
-            <img class = "centralise" src="resource/cat_god.png" alt="Cat God" height="500"/>
-            <img id = "bubble1" src="resource/bubble1.png" alt="Speech Bubble 1"/>
-            <img id = "bubble2" src="resource/bubble2.png" alt="Speech Bubble 2"/>
-            <img id = "bubble3" src="resource/bubble3.png" alt="Speech Bubble 2"/>
+            <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500"/>
+            <img id = "bubble3" src="images/bubble3.png" alt="Speech Bubble 2"/>
             <div class ="bottomMiddle">
                 Cat God <br>
                 <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center"><b>Bow you puney humans</b></div>
             </div>
         </div>
-        <div class="container" style= "padding- top: 20px; left: 50px; right: 50px; bottom: 20px;">
+        
+        
+        
+        <div class="container" style= "padding-top: 30px; padding-left: 10%; padding-right: 10%; bottom: 20px;">
 
             <div class="form-group">
                 <div style ="font-family: 'Pacifico'; font-size: 30px; text-align: left"> 
                     <label for="usr">Name of puny human:</label>
                     <input type="text" class="form-control" id="usr">
+                    
+                    <label for="num">Number of galleons you wish to donate to the Androgynous Cat CORS Goddess:</label>
+                        <input type="number" class="form-control" id="num">
                 </div>
                 <div class="form-group">
                     <div style ="font-family: 'Pacifico'; font-size: 30px; text-align: left "> 

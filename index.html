@@ -87,59 +87,6 @@
 
   <audio id="playom" src="sounds/om.mp3" loop="loop"></audio>
 
-  <script type="text/javascript">
-        //play background om music
-            $("#playom").get(0).play();
-
-            //revealation
-            var audioElement = document.createElement('audio');
-            audioElement.setAttribute('src', 'sounds/gong.mp3');
-            $.get();
-
-            $('#playgong').click(function () {
-                $("#playom").get(0).pause();
-                audioElement.play();
-            });
-
-            $("#shake-btn").click(function(){
-               $(".whole").effect( "shake", {times:30}, 4000 );
-            });
-
-            //laughter
-            var laughaudio = audioElement;
-            laughaudio.addEventListener("ended", function () {
-                laughaudio.src = "resource/laughter.mp3";
-                laughaudio.loop = true;
-                laughaudio.play();
-            });
-
-            //first bubble fade in
-            $('#bubble1').delay(1000).fadeIn(300);
-        //});
-
-
-        //scrolling animation
-        window.onscroll = function () {
-            firstBubble();
-            secondBubble();
-        };
-
-        function firstBubble() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("bubble1").className = "hidebubble";
-                $('#bubble2').fadeIn(200);
-            }
-        }
-
-        function secondBubble() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("bubble2").className = "hidebubble";
-                $('#bubble3').fadeIn(200);
-            }
-        }
- 
-      </script>
-
 </head>
 
 
@@ -232,6 +179,60 @@
 
 
 <script type="text/javascript" src="main.js"></script>
+
+
+<script type="text/javascript">
+            //play background om music
+            $("#playom").get(0).play();
+
+            //revealation
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'sounds/gong.mp3');
+            $.get();
+
+            $('#playgong').click(function () {
+                $("#playom").get(0).pause();
+                audioElement.play();
+            });
+
+            $("#shake-btn").click(function(){
+               $(".whole").effect( "shake", {times:30}, 4000 );
+            });
+
+            //laughter
+            var laughaudio = audioElement;
+            laughaudio.addEventListener("ended", function () {
+                laughaudio.src = "resource/laughter.mp3";
+                laughaudio.loop = true;
+                laughaudio.play();
+            });
+
+            //first bubble fade in
+            $('#bubble1').delay(1000).fadeIn(300);
+        //});
+
+
+        //scrolling animation
+        window.onscroll = function () {
+            firstBubble();
+            secondBubble();
+        };
+
+        function firstBubble() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("bubble1").className = "hidebubble";
+                $('#bubble2').fadeIn(200);
+            }
+        }
+
+        function secondBubble() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("bubble2").className = "hidebubble";
+                $('#bubble3').fadeIn(200);
+            }
+        }
+ 
+      </script>
 
 <!-- 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
