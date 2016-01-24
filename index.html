@@ -53,14 +53,105 @@
           font-family: 'Pacifico', cursive; 
           font-size: 64px;
       }
+      
+      #bubble1
+      {
+          z-index: 51;
+          position: absolute;
+          right:15%;
+          top:2%;
+          display: none;
+      }
+      #bubble2
+      {
+          z-index: 52;
+          position: absolute;
+          left:15%;
+          top:20%;
+          display: none;
+      }
+      #bubble3
+      {
+          z-index: 52;
+          position: absolute;
+          right:15%;
+          top:50%;
+          display: none;
+      }
+      .hidebubble
+      {
+          visibility: hidden;
+      }
   </style>
+
+  <audio id="playom" src="sounds/om.mp3" loop="loop"></audio>
+  <audio id="playgong1" src="sounds/gong.mp3" loop="loop"></audio>
+
+  <script type="text/javascript">
+        //first bubble loading
+        $(document).ready(function () {
+            //play background om music
+            $("#playom").get(0).play();
+
+            //revealation
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'resource/gong.mp3');
+            $.get();
+
+            $('#playgong').click(function () {
+                $("#playom").get(0).pause();
+                audioElement.play();
+            });
+
+            //first bubble fade in
+            $('#bubble1').delay(1000).fadeIn(300);
+        });
+
+
+        //scrolling animation
+        window.onscroll = function () {
+            firstBubble();
+            secondBubble();
+        };
+
+        function firstBubble() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("bubble1").className = "hidebubble";
+                $('#bubble2').fadeIn(200);
+            }
+        }
+
+        function secondBubble() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("bubble2").className = "hidebubble";
+                $('#bubble3').fadeIn(200);
+            }
+        }
+
+
+        function shake(n) {
+            if (parent.moveBy) {
+                for (i = 10; i > 0; i--) {
+                    for (j = n; j > 0; j--) {
+                        parent.moveBy(0, i);
+                        parent.moveBy(i, 0);
+                        parent.moveBy(0, -i);
+                        parent.moveBy(-i, 0);
+                    }
+                }
+            }
+        }    </script>
+
 </head>
 
 
 <body> 
 
   <div class="top">
-    <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500">
+            <img class = "centralise" src="images/cat_god.png" alt="Cat God" height="500">
+            <img id = "bubble1" src="images/bubble1.png" alt="Speech Bubble 1"/>
+            <img id = "bubble2" src="images/bubble2.png" alt="Speech Bubble 2"/>
+            <img id = "bubble3" src="images/bubble3.png" alt="Speech Bubble 3"/>
       <div class ="bottomMiddle">
           Cat God <br>
           <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center"><b>Bow you puney humans</b></div>
@@ -73,7 +164,12 @@
       <h1>Welcome to the Shrine of the Cat Cors</h1>
     </div>
     <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center">
-      <p><b>This is where you pay your respect...in hopes of securing that 4k module.</b></p> 
+      <p><b>This is where you pay your respect...in hopes of securing that 4k module.</b> </p>
+        <p><img src="http://www.e-zeeinternet.com/count.php?page=1134657&style=big_block&nbdigits=5&reloads=1" alt="Web Counter" border="0" >
+        punies have seeked me for luck <br></p>
+      <button id="playgong">Play Music</button><br>
+      <input type=button onClick="shake(2)" value="Shake Screen">
+
     </div>
   </div>
 </div>
@@ -81,14 +177,14 @@
 
 <div class="container">
   <div class="row">
-  <FORM>
-
     <div class="col-sm-4">
       <input type="image" 
       id = "pray-btn"
       src="images/pray_pic.png" width="300"
       onMouseOver="this.src='images/pray_hover.png'" onMouseOut="this.src='images/pray_pic.png'"
       > 
+      <br> <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center">
+      Offer food to the Cat God </div> 
 
     </div>
 
@@ -98,21 +194,32 @@
       'newwindow','width=500, height=300'); return false;"
       VALUE="SACRIFICE" src="images/sacrifice_pic.png" width="300"
       onMouseOver="this.src='images/sacrifice_hover.png'" onMouseOut="this.src='images/sacrifice_pic.png'">
+      
+      <br> <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center">
+      Spam your friends to please the Cat God  </div> 
+
     </div>
 
     <div class="col-sm-4">
       <input type="image" 
-      onClick="window.open('http://sosd.org.sg/community-outreach/healing-paws/', 'newwindow'); return false;" src="images/donate_pic.png" VALUE="DONATE" width="300"
+      onClick="window.open('donate.html', 'newwindow'); return false;" src="images/donate_pic.png" VALUE="DONATE" width="300"
       onMouseOver="this.src='images/donate_hover.png'" onMouseOut="this.src='images/donate_pic.png'"> 
+
+       <br> <div style ="font-family: 'Amatic SC', bold; font-size: 30px; text-align: center">
+      Donate to a charity to please the Cat God </div> 
     </div>
 
   </div>
-  </FORM>
 
 
 <br><br><br>
 </div> 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/gh-pages
 <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -131,11 +238,8 @@
      }(document, 'script', 'facebook-jssdk'));
   </script> 
 
-  <script type="text/javascript">
-$(function() {
-    $(document).snow({ SnowImage: "final_cat_food.gif" });
-});
-</script>
+
+<script type="text/javascript" src="main.js"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
