@@ -23,6 +23,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" type="text/css" href="openingeffects.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
   <script src="stylesheets/jquery.min.js"></script> 
@@ -97,6 +98,7 @@
   </style>
 
   <audio id="playom" src="sounds/om.mp3" loop="loop" autoplay></audio>
+
 
   
 </head>
@@ -174,7 +176,12 @@
 <br><br><br>
 </div> 
 
-
+<div class="whole-fade-in">
+  <div id="loader-wrapper">
+    <div id="loader"> </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div></div>
 
 <script>
     window.fbAsyncInit = function() {
@@ -226,6 +233,7 @@
 
             //first bubble fade in
             $('#bubble1').delay(1000).fadeIn(300);
+            $(".whole-fade-in").delay(1000).fadeOut(3000);
 
 
         //scrolling animation
@@ -252,6 +260,6 @@
       
     </script>
 
-</div> 
+</div>
 </body>
 </html> 
